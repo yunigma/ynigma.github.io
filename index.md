@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Yulia's BLOG
-tagline: GitHub Pages with disqus omments
+tagline: GitHub Pages with disqus comments
 description: Minimal tutorial on making a simple website with GitHub Pages
 ---
 
