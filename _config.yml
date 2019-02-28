@@ -74,8 +74,8 @@ JB :
   # Set 'provider' to the comment provider you want to use.
   # Set 'provider' to false to turn commenting off globally.
   #
-  comments : true
-    provider : disqus
+  comments :
+    provider : true
 
   # Settings for analytics helper
   # Set 'provider' to the analytics provider you want to use.
