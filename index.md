@@ -12,5 +12,5 @@ There will be my blog for the QM in HCI course, FS19.
 - [Third BLOG](pages/3blog.html)
 
 ---
-
+![Alt text](https://github.com/yunigma/yunigma.github.io/images/bird.jpg)
 I am glad to see you!
