@@ -75,7 +75,7 @@ JB :
   # Set 'provider' to false to turn commenting off globally.
   #
   comments :
-    provider : true
+    provider :  true
 
   # Settings for analytics helper
   # Set 'provider' to the analytics provider you want to use.
