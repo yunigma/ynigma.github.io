@@ -4,13 +4,13 @@ title: Linear models
 description: This page is reserved for my 1st BLOG.
 ---
 
-This is what to do if you just want a website.
+:shipit:
 
-### Prepare the data
+#### 1. Prepare the data
 Reading the data from a file and change the IV columns to a factor type.
 
 
-### Formulating the model
+#### 2. Formulating the model
 
 | Model function  | Description |
 | -------- | -------- |
@@ -19,7 +19,7 @@ Reading the data from a file and change the IV columns to a factor type.
 | Two IVs with interaction | lm(DV ~ IV1 * IV2, data = data) |
 | Two IVs, interaction, within-subjects design | lmer(DV ~ (1\|participant) + IV1 * IV2, data = data) (import::from(lmerTest, lmer))|
 
-### Analysis of variance
+#### 3. Analysis of variance
 
 import::from(psycho, analyze)
 
