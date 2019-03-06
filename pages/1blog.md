@@ -17,7 +17,7 @@ Reading the data from a file and change the IV columns to a factor type.
 | One IV | lm(DV ~ IV, data = data) |
 | Two IVs | lm(DV ~ IV1 + IV2, data = data) |
 | Two IVs with interaction | lm(DV ~ IV1 * IV2, data = data) |
-| Two IVs, interaction, within-subjects design | lmer(DV ~ (1|participant) + IV1 * IV2, data = data) (import::from(lmerTest, lmer))|
+| Two IVs, interaction, within-subjects design | lmer(DV ~ (1\|participant) + IV1 * IV2, data = data) (import::from(lmerTest, lmer))|
 
 ### Analysis of variance
 
