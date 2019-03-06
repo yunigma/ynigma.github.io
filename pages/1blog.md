@@ -14,12 +14,10 @@ read_csv2()
 read_tsv()
 read_delim()
 
-read_fwf()``` reads fixed width files. You can specify fields either by their widths with ```fwf_widths()``` or their position with ```fwf_positions()```
-```read_table()``` reads a common variation of fixed width files where columns are separated by white space.
-```
+read_fwf() -- reads fixed width files. You can specify fields either by their widths with fwf_widths() or their position with fwf_positions().
+read_table() reads a common variation of fixed width files where columns are separated by white space.
 read_log()
 ```
-
 
 Change the IV columns to a factor type:
 ```
