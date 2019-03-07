@@ -51,13 +51,13 @@ guess_encoding(charToRaw(x1)) -- detect the used encoding.
 parse_date("1 janvier 2015", "%d %B %Y", locale = locale("fr")) -- French
 ```
 #### 3. Other type of data
-- *haven* reads SPSS, Stata, and SAS files.
+- **haven** reads SPSS, Stata, and SAS files.
 
-- *readxl* reads excel files (both .xls and .xlsx).
+- **readxl** reads excel files (both .xls and .xlsx).
 
-- *DBI*, along with a database specific backend (e.g. *RMySQL*, *RSQLite*, *RPostgreSQL* etc) allows you to run SQL queries against a database and return a data frame.
+- **DBI**, along with a database specific backend (e.g. **RMySQL**, **RSQLite**, **RPostgreSQL** etc) allows you to run SQL queries against a database and return a data frame.
 
-- For hierarchical data: use *jsonlite* (by Jeroen Ooms) for json, and xml2 for XML.
+- For hierarchical data: use **jsonlite** (by Jeroen Ooms) for json, and xml2 for XML.
 
 
 
