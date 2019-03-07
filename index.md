@@ -10,7 +10,7 @@ There will be my blog for the QM in HCI course, FS19.
 
 - [Data preparation](pages/1blog.html)
 - [Linear models](pages/2blog.html)
-- [Third BLOG](pages/3blog.html)
+- [R functionality](pages/3blog.html)
 
 ---
 ![Picture](images/bird.jpg)
