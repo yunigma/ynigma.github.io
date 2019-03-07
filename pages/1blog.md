@@ -1,22 +1,23 @@
 ---
 layout: page
-title: Linear models
+title: Data preparation
 description: This page is reserved for my 1st BLOG.
 ---
 
 :shipit:
 
-#### 1. Prepare the data
+#### 1. Open the data
 Reading the data from a file:
 ```
+readr:
 read_csv()
-read_csv2()
+read_csv2() -- reads semicolon separated files.
 read_tsv()
 read_delim()
 
 read_fwf() -- reads fixed width files. You can specify fields either by their widths with fwf_widths() or their position with fwf_positions().
-read_table() reads a common variation of fixed width files where columns are separated by white space.
-read_log()
+read_table() -- reads a common variation of fixed width files where columns are separated by white space.
+read_log() -- reads Apache style log files.
 ```
 
 Change the IV columns to a factor type:
@@ -27,28 +28,36 @@ data <-
     device = as.factor(device),
     vision = as.factor(vision))
 ```
+#### 2. Parsing a vector
 
+Using parsers is mostly a matter of understanding what’s available and how they deal with different types of input.
 
-#### 2. Formulating the model
+```
+str(parse_logical(c("TRUE", "FALSE", "NA")))
+str(parse_integer(c("1", "2", "3")))
+parse_integer(c("1", "231", ".", "456"), na = ".")
+str(parse_date(c("2010-01-01", "1979-10-14")))
+parse_double("1,23", locale = locale(decimal_mark = ","))
+parse_number("$100") -- ignores non-numeric characters before and after the number.
+parse_number("123'456'789", locale = locale(grouping_mark = "'"))
 
-| Model function  | Description |
-| -------- | -------- |
-| One IV | lm(DV ~ IV, data = data) |
-| Two IVs | lm(DV ~ IV1 + IV2, data = data) |
-| Two IVs with interaction | lm(DV ~ IV1 * IV2, data = data) |
-| Two IVs, interaction, within-subjects design | lmer(DV ~ (1\|participant) + IV1 * IV2, data = data) (import::from(lmerTest, lmer))|
+parse_factor()
+parse_character()
 
-#### 3. Analysis of variance
+charToRaw("Hadley") -- encoding ASCII.
+parse_character(x1, locale = locale(encoding = "Latin1")) -- to specify the encoding.
+guess_encoding(charToRaw(x1)) -- detect the used encoding.
 
-import::from(psycho, analyze)
+parse_date("1 janvier 2015", "%d %B %Y", locale = locale("fr")) -- French
+```
+#### 3. Other type of data
+- haven reads SPSS, Stata, and SAS files.
 
-m_full <- lm(DV ~ IV1 * IV2, data = data)
-anova_m_full <- anova(m_full)
-anova_m_full
+- readxl reads excel files (both .xls and .xlsx).
 
-results_anova <- analyze(anova_m_full)
-print(results_anova)
-summary(results_anova)
+- DBI, along with a database specific backend (e.g. RMySQL, RSQLite, RPostgreSQL etc) allows you to run SQL queries against a database and return a data frame.
+
+- For hierarchical data: use jsonlite (by Jeroen Ooms) for json, and xml2 for XML.
 
 
 
