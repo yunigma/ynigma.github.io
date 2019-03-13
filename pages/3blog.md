@@ -45,3 +45,16 @@ The pipe won’t work for two classes of functions:
 - functions that use lazy evaluation (tryCatch(stop("!"), error = function(e) "An error")).
 
  %T>% works like %>% except that it returns the left-hand side instead of the right-hand side.
+
+### 3. Data visualisation
+```
+ggplot(data = <DATA>) +
+  <GEOM_FUNCTION>(
+     mapping = aes(<MAPPINGS>),
+     stat = <STAT>,
+     position = <POSITION>
+  ) +
+  <COORDINATE_FUNCTION> +
+  <FACET_FUNCTION>
+```
+
