@@ -6,7 +6,7 @@ description: Minimal tutorial on making a simple website with GitHub Pages
 ---
 
 There will be my blog for the QM in HCI course, FS19.
-- **R for Data Science:** <https://r4ds.had.co.nz/l>
+- **R for Data Science:** <https://r4ds.had.co.nz/>
 - **R cheatsheets:** <https://www.rstudio.com/resources/cheatsheets/>
 
 - [1. Data preparation](pages/1blog.html)
