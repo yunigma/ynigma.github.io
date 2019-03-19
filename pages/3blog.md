@@ -1,6 +1,6 @@
 ---
 layout: page
-title: R functionality
+title: R basics
 description: This page is reserved for my 3d BLOG.
 ---
 
@@ -46,7 +46,7 @@ The pipe won’t work for two classes of functions:
 
  %T>% works like %>% except that it returns the left-hand side instead of the right-hand side.
 
-### 3. Data visualisation
+### 3. Data visualisation <https://r4ds.had.co.nz/data-visualisation.html>
 ```
 ggplot(data = <DATA>) +
   <GEOM_FUNCTION>(
@@ -58,3 +58,5 @@ ggplot(data = <DATA>) +
   <FACET_FUNCTION>
 ```
 
+### 4. Cheat sheet "BASICS"
+![Picture](images/r-cheat-sheet-basics.pdf)
