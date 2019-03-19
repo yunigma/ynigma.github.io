@@ -59,6 +59,6 @@ ggplot(data = <DATA>) +
 ```
 
 ### 4. Cheat sheet "BASICS"
-![Picture](images/r-cheat-sheet-basics1.jpg)
+![Picture](images/r_cheat_sheet_basics1.jpg)
 
-![Picture](images/r-cheat-sheet-basics2.jpg)
+![Picture](images/r_cheat_sheet_basics2.jpg)
