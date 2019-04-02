@@ -1,7 +1,7 @@
 ---
 layout: page
 title: R playing around with a language corpus
-description: This page is reserved for my 4d BLOG.
+description: This page is reserved for my 4th BLOG.
 ---
 
 ### The WALS data set
