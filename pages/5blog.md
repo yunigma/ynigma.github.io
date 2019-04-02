@@ -102,6 +102,10 @@ days(50) + hours(25) + minutes(2)
 ```
 
 **Intervals**. An interval is a duration with a starting point: that makes it precise so you can determine exactly how long it is:
+```
+next_year <- today() + years(1)
+(today() %--% next_year) / ddays(1)
+```
 
 
 #### Time zones
