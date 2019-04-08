@@ -7,7 +7,7 @@ description: This page is reserved for my 4th BLOG.
 ### The WALS data set
 This is blog is a playing around with two variables and their visualisation of the data from a linguistic dataset WALS. The WALS is a dataset that contains many languages of the world with their phonetic, grammatic and syntactic characteristics. Using the chi^2 test the relation between two variables - Future Tense and the expression of Prohibitive in a language - is investigated. To build the plot, an additional variable - probability of explicite Future Tense with a given Prohibitive - is calculates.
 
-#### 1. Taking two variables from the WALS data setand investigating the relationship between the two variables.
+#### 1. Taking two variables from the WALS data set and investigating the relationship between the two variables.
 
 ```
 wals <- read.csv('data/wals_data.csv', header=T, sep=',')

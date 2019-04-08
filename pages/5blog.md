@@ -5,7 +5,7 @@ description: This page is reserved for my 5th BLOG.
 ---
 
 ### Dates and times
-Time is often used in the data and its formate can be various. In the present blod I will post about possible operation to work with dates and times using the library "lubridate".
+Time is often used in the data and its formate can be various. In the present blog I will post about possible operations to work with dates and times using the library "lubridate".
 
 ```
 library(lubridate)

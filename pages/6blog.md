@@ -29,7 +29,7 @@ near(sqrt(2) ^ 2,  2)
 near(1 / 49 * 49, 1)
 ```
 
-#### 2.1. Logical operators
+#### Logical operators
 ```
 filter(flights, month == 11 | month == 12)
 nov_dec <- filter(flights, month %in% c(11, 12))
@@ -98,7 +98,7 @@ transmute(flights,
 )
 ```
 
-### 5.1. Useful creation functions
+### Useful creation functions
 Modular arithmetic: %/% (integer division) and %% (remainder), where x == y * (x %/% y) + (x %% y). Modular arithmetic is a handy tool because it allows you to break integers up into pieces. For example, in the flights dataset, you can compute hour and minute from dep_time with:
 ```
 transmute(flights,

@@ -24,8 +24,19 @@ In fact, this is my first steps in learning R and I have created a separate blog
 
 ### 2. Factors
 ```
-fct_reorder()
+y1 <- factor(x1, levels = month_levels)
+y1
+#> [1] Dec Apr Jan Mar
+#> Levels: Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec
+```
 
+**fct_reorder()** takes three arguments:
+
+- f, the factor whose levels you want to modify.
+- x, a numeric vector that you want to use to reorder the levels.
+- Optionally, fun, a function that’s used if there are multiple values of x for each value of f. The default value is median.
+
+```
 by_age <- gss_cat %>%
   filter(!is.na(age)) %>%
   count(age, marital) %>%
