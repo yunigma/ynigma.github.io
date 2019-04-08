@@ -7,6 +7,13 @@ description: This page is reserved for my 1st BLOG.
 :shipit:
 
 ### 1. Read the data
+My first blog is about the start operations to open and get the data:
+- open the data
+- parse a vector
+- other types of the data to open
+- cleaning the data
+
+
 #### 1.1. Open
 Reading the data from a file:
 ```

@@ -4,7 +4,25 @@ title: R basics
 description: This page is reserved for my 3d BLOG.
 ---
 
-### 1. Factors
+In fact, this is my first steps in learning R and I have created a separate blog to cover some basic terms like factors, data types, pipes, and a basic template for visualisation.
+
+### 1. Type of the data
+- **int** stands for integers.
+
+- **dbl** stands for doubles, or real numbers.
+
+- **chr** stands for character vectors, or strings.
+
+- **dttm** stands for date-times (a date + a time).
+
+- **lgl** stands for logical, vectors that contain only TRUE or FALSE.
+
+- **fctr** stands for factors, which R uses to represent categorical variables with fixed possible values.
+
+- **date** stands for dates.
+
+
+### 2. Factors
 ```
 fct_reorder()
 
@@ -18,7 +36,10 @@ fct_infreq() -- to order levels in increasing frequency.
 
 fct_lump(relig, n = 10) --  to progressively lump together n of the smallest groups, ensuring that the aggregate is still the smallest group.
 ```
-### 2. Pipes
+
+### 3. Pipes
+Behind the scenes, x %>% f(y) turns into f(x, y), and x %>% f(y) %>% g(z) turns into g(f(x, y), z) and so on.
+
 `
 library(magrittr)
 `
@@ -46,7 +67,28 @@ The pipe won’t work for two classes of functions:
 
  %T>% works like %>% except that it returns the left-hand side instead of the right-hand side.
 
-### 3. Data visualisation <https://r4ds.had.co.nz/data-visualisation.html>
+Another example:
+```
+by_dest <- group_by(flights, dest)
+delay <- summarise(by_dest,
+  count = n(),
+  dist = mean(distance, na.rm = TRUE),
+  delay = mean(arr_delay, na.rm = TRUE)
+)
+delay <- filter(delay, count > 20, dest != "HNL")
+
+delays <- flights %>%
+  group_by(dest) %>%
+  summarise(
+    count = n(),
+    dist = mean(distance, na.rm = TRUE),
+    delay = mean(arr_delay, na.rm = TRUE)
+  ) %>%
+  filter(count > 20, dest != "HNL")
+  ```
+
+
+### 4. Data visualisation <https://r4ds.had.co.nz/data-visualisation.html>
 ```
 ggplot(data = <DATA>) +
   <GEOM_FUNCTION>(
@@ -58,7 +100,7 @@ ggplot(data = <DATA>) +
   <FACET_FUNCTION>
 ```
 
-### 4. Cheat sheet "BASICS"
+### 5. Cheat sheet "BASICS"
 ![Picture](images/r_cheat_sheet_basics1.jpg)
 
 ![Picture](images/r_cheat_sheet_basics2.jpg)
