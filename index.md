@@ -15,6 +15,7 @@ There will be my blog for the QM in HCI course, FS19.
 - [4. R playing around with a language corpus](pages/4blog.html)
 - [5. Dates and times](pages/5blog.html)
 - [6. Data transformation](pages/6blog.html)
+- [7. New stuff](pages/7blog.html)
 
 ---
 ![Picture](images/bird.jpg)
