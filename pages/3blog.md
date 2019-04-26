@@ -1,6 +1,6 @@
 ---
 layout: page
-title: R basics
+title: R basics and data visualisation
 description: This page is reserved for my 3d BLOG.
 ---
 
@@ -99,7 +99,7 @@ delays <- flights %>%
   ```
 
 
-### 4. Data visualisation <https://r4ds.had.co.nz/data-visualisation.html>
+### 4. Data visualisation
 ```
 ggplot(data = <DATA>) +
   <GEOM_FUNCTION>(
@@ -110,6 +110,9 @@ ggplot(data = <DATA>) +
   <COORDINATE_FUNCTION> +
   <FACET_FUNCTION>
 ```
+Useful links:
+<https://r4ds.had.co.nz/data-visualisation.html>
+<The Chartmaker Directory><http://chartmaker.visualisingdata.com/>
 
 ### 5. Cheat sheet "BASICS"
 ![Picture](images/r_cheat_sheet_basics1.jpg)
