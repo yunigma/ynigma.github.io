@@ -4,7 +4,7 @@ title: Data transformation and wrangling
 description: This page is reserved for my 6th BLOG.
 ---
 
-### Data transformation
+### Data transformation and wrangling
 
 In this blog I will post about the basic operations to transfrom and observe the data. The data often have the form that does not fit exactly the research purposes and some modifications are needed.
 
