@@ -11,7 +11,7 @@ description: This page is reserved for my 2d BLOG.
 | One IV | lm(DV ~ IV, data = data) |
 | Two IVs | lm(DV ~ IV1 + IV2, data = data) |
 | Two IVs with interaction | lm(DV ~ IV1 * IV2, data = data) |
-| Two IVs, interaction, within-subjects design | lmer(DV ~ (1\|participant) + IV1 * IV2, data = data) (import::from(lmerTest, lmer))|
+| Two IVs, interaction, **within-subjects design** | lmer(DV ~ (1\|participant) + IV1 * IV2, data = data) (import::from(lmerTest, lmer))|
 
 #### 2. Analysis of variance
 
