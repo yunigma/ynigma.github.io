@@ -14,7 +14,7 @@ Almost every week, I create a blog with a new topic according to the topic we ha
 Apart from thematical (or content) blogs, the current blog0 was created, to provide general description about the whole BLOG: its structure, content and the creation process.
 
 By 26.04 there are 7 **content** blog pages and 1 **organisation** blog:
-0. How my BLOG was created
+. How my BLOG was created
 1. Data preparation
 2. Linear models
 3. R basics
@@ -22,6 +22,17 @@ By 26.04 there are 7 **content** blog pages and 1 **organisation** blog:
 5. Dates and times
 6. Data transformation
 7. TBA
+
+By 22.05 the structure has been changed a bit and in the final version there are the following blog pages:
+. How my BLOG was created
+1. Data preparation
+2. Linear models
+3. R basics
+4. R playing around with a language corpus
+5. Dates and times
+6. Data transformation and wrangling 1
+7. Interaction effects and Model fitting
+8. Data transformation and wrangling 2
 
 #### 2. Content
 From the beginning I decided to put my code library inside the blog. The reasons to do this:

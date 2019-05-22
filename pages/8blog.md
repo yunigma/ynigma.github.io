@@ -41,6 +41,7 @@ An **outer join** keeps observations that appear in at least one of the tables; 
 
 ```
 ```
+
 #### 3. Change the shape of the tables
 
 **spread()**
