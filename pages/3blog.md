@@ -112,7 +112,8 @@ ggplot(data = <DATA>) +
 ```
 Useful links:
 <https://r4ds.had.co.nz/data-visualisation.html>
-<The Chartmaker Directory><http://chartmaker.visualisingdata.com>
+The Chartmaker Directory:
+<http://chartmaker.visualisingdata.com>
 
 
 ### 5. Cheat sheet "BASICS"
