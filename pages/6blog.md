@@ -1,12 +1,13 @@
 ---
 layout: page
-title: Data transformation and wrangling
+title: Data transformation and wrangling 1
 description: This page is reserved for my 6th BLOG.
 ---
 
-### Data transformation and wrangling
+### Data transformation and wrangling 1
 
 In this blog I will post about the basic operations to transfrom and observe the data. The data often have the form that does not fit exactly the research purposes and some modifications are needed.
+Data wrangling video: <https://www.youtube.com/watch?v=85tud7I8MAE&list=PLXugMGL39JWO_n-WNdppkyMuYfQBU_h_U&index=6>
 
 
 ### 1. dplyr functions
@@ -19,6 +20,7 @@ In this blog I will post about the basic operations to transfrom and observe the
 
 
 ### 2. Filter rows with filter()
+To choose the rows with certain values.
 ```
 filter(flights, month == 1, day == 1)
 ```
@@ -43,11 +45,17 @@ filter(flights, arr_delay <= 120, dep_delay <= 120)
 **arrange()** works similarly to filter() except that instead of selecting rows, it changes their order:
 ```
 arrange(df, desc(x))
+
+df %>%
+  arrange(desc(x))
 ```
 Aggregation functions obey the usual rule of missing values: if there’s any missing value in the input, the output will be a missing value. Fortunately, all aggregation functions have an `na.rm argument which removes the missing values prior to computation:
 
 
 ### 4. Select columns with select()
+
+Use **everything()** to reorder columns.
+To rename columns, use new_name=old_name.
 ```
 select(flights, year:day)
 select(flights, -(year:day))
