@@ -46,8 +46,6 @@ An **outer join** keeps observations that appear in at least one of the tables; 
 - A **right_join()** keeps all observations in y.
 - A **full_join()** keeps all observations in x and y.
 
-```
-```
 
 ### 3. Change the shape of the tables
 

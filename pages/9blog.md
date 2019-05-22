@@ -31,7 +31,8 @@ daily %>%
   summarise(flights = n())
 ```
 
-### 2. Example from the project: filtering participants whose average erroe on the validation stimuli was more than 0.2
+### 2. Example from the project
+Task: filtering participants whose average error on the validation stimuli was more than 0.2
 ```
 # check the validation stimuli and delete those participants whose average error exceeds 0.2
 validation_stimuli <- results %>% filter(isValidation == 1) %>% group_by(Participant) %>% summarise(mean = mean(Error))
