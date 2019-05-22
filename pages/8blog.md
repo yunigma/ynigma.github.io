@@ -7,7 +7,7 @@ description: This page is reserved for my 8th BLOG.
 ### Data transformation and wrangling 2
 The second part of data wrangling topic to cover more functions to organise the data.
 
-#### 1. Separating and uniting
+#### 1. Modify columns
 ##### separate() function
 
 ...pulls apart one column into multiple columns, by splitting wherever a separator character appears:
@@ -28,7 +28,8 @@ data %>%
 bind_cols(data_left, data_right)
 bind_rows(data_01, data_02)
 ```
-**JOIN** finctions
+**JOIN** finctions:
+
 An **inner join** matches pairs of observations whenever their keys are equal:
 ```
 inner_join(data_time, data_error, by=c("user", "device"))
@@ -38,7 +39,9 @@ An **outer join** keeps observations that appear in at least one of the tables; 
 - A **right_join()** keeps all observations in y.
 - A **full_join()** keeps all observations in x and y.
 
+
 #### 3. Change the shape of the tables
+
 **spread()**
 ```
 table2
@@ -66,6 +69,7 @@ table2 %>%
 #> 6 China        2000 213766 1280428583
 ```
 **gather()**
+
 ```
 table4a %>%
   gather(`1999`, `2000`, key = "year", value = "cases")
@@ -78,4 +82,4 @@ table4a %>%
 #> 4 Afghanistan 2000    2666
 #> 5 Brazil      2000   80488
 #> 6 China       2000  213766
-``
+```
