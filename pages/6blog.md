@@ -141,3 +141,14 @@ percent_rank(y)
 cume_dist(y)
 #> [1] 0.2 0.6 0.6  NA 0.8 1.0
 ```
+Conditions:
+```
+data %>%
+  mutate(error_category = if_else(error < 3, "low", "high"))
+
+data %>%
+  mutate(time_category = case_when(
+    time < 13             ~ "fast",
+    between(time, 13, 17) ~ "medium",
+    TRUE                  ~ "low"))
+```

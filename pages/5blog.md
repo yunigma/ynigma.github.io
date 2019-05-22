@@ -38,7 +38,7 @@ parse_datetime("20101010")
 ```
 
 
-#### From individual components
+#### 1. From individual components
 
 ```
 flights %>%
@@ -47,7 +47,7 @@ flights %>%
 ```
 
 
-#### Getting & setting components
+#### 2. Getting & setting components
 
 ```
 datetime <- ymd_hms("2016-07-08 12:34:56")
@@ -71,7 +71,7 @@ ymd("2015-02-01") %>%
 ```
 
 
-#### Time spans
+#### 3. Time spans
 - durations
 - periods
 - intervals
@@ -108,7 +108,7 @@ next_year <- today() + years(1)
 ```
 
 
-#### Time zones
+#### 4. Time zones
 
 Unless otherwise specified, lubridate always uses UTC. UTC (Coordinated Universal Time) is the standard time zone used by the scientific community and roughly equivalent to its predecessor GMT (Greenwich Mean Time).
 

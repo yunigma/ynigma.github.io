@@ -27,7 +27,7 @@ daily <- group_by(flights, year, month, day)
 If you need to remove grouping, and return to operations on ungrouped data, use ungroup():
 ```
 daily %>%
-  ungroup() %>%             # no longer grouped by date
+  ungroup() %>%             # no longer grouped
   summarise(flights = n())
 ```
 
