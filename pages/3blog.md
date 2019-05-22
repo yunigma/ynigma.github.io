@@ -114,6 +114,7 @@ Useful links:
 <https://r4ds.had.co.nz/data-visualisation.html>
 <The Chartmaker Directory><http://chartmaker.visualisingdata.com/>
 
+more info
 ### 5. Cheat sheet "BASICS"
 ![Picture](images/r_cheat_sheet_basics1.jpg)
 

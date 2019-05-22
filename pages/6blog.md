@@ -10,16 +10,16 @@ In this blog I will post about the basic operations to transfrom and observe the
 Data wrangling video: <https://www.youtube.com/watch?v=85tud7I8MAE&list=PLXugMGL39JWO_n-WNdppkyMuYfQBU_h_U&index=6>
 
 
-### 1. dplyr functions
+### 0. dplyr (tidyverse) functions
 
 - Pick observations by their values **(filter())**.
 - Reorder the rows **(arrange())**.
 - Pick variables by their names **(select())**.
 - Create new variables with functions of existing variables **(mutate())**.
-- Collapse many values down to a single summary **(summarise())**.
+- Modular arithmetic
 
 
-### 2. Filter rows with filter()
+### 1. Filter rows with filter()
 To choose the rows with certain values.
 ```
 filter(flights, month == 1, day == 1)
@@ -41,7 +41,7 @@ filter(flights, arr_delay <= 120, dep_delay <= 120)
 **filter()** only includes rows where the condition is TRUE; it excludes both FALSE and NA values.
 
 
-### 3. Arrange rows with arrange()
+### 2. Arrange rows with arrange()
 **arrange()** works similarly to filter() except that instead of selecting rows, it changes their order:
 ```
 arrange(df, desc(x))
@@ -52,7 +52,7 @@ df %>%
 Aggregation functions obey the usual rule of missing values: if there’s any missing value in the input, the output will be a missing value. Fortunately, all aggregation functions have an `na.rm argument which removes the missing values prior to computation:
 
 
-### 4. Select columns with select()
+### 3. Select columns with select()
 
 Use **everything()** to reorder columns.
 To rename columns, use new_name=old_name.
@@ -75,7 +75,7 @@ There are a number of helper functions you can use within select():
 - **num_range("x", 1:3)**: matches x1, x2 and x3.
 
 
-### 5. Add new variables with mutate()
+### 4. Add new variables with mutate()
 **mutate()** always adds new columns at the end of your dataset.
 ```
 flights_sml <- select(flights,
@@ -106,8 +106,8 @@ transmute(flights,
 )
 ```
 
-### Useful creation functions
-Modular arithmetic: %/% (integer division) and %% (remainder), where x == y * (x %/% y) + (x %% y). Modular arithmetic is a handy tool because it allows you to break integers up into pieces. For example, in the flights dataset, you can compute hour and minute from dep_time with:
+### 5. Useful creation functions
+**Modular arithmetic**: %/% (integer division) and %% (remainder), where x == y * (x %/% y) + (x %% y). Modular arithmetic is a handy tool because it allows you to break integers up into pieces. For example, in the flights dataset, you can compute hour and minute from dep_time with:
 ```
 transmute(flights,
   dep_time,
@@ -141,24 +141,3 @@ percent_rank(y)
 cume_dist(y)
 #> [1] 0.2 0.6 0.6  NA 0.8 1.0
 ```
-
-
-### 6. Grouped summaries with summarise()
-```
-summarise(flights, delay = mean(dep_delay, na.rm = TRUE))
-```
-With **summarise()** one can use aggregate functions.
-When you group by multiple variables, each summary peels off one level of the grouping. That makes it easy to progressively roll up a dataset:
-```
-daily <- group_by(flights, year, month, day)
-(per_day   <- summarise(daily, flights = n()))
-(per_month <- summarise(per_day, flights = sum(flights)))
-(per_year  <- summarise(per_month, flights = sum(flights)))
-```
-If you need to remove grouping, and return to operations on ungrouped data, use ungroup():
-```
-daily %>%
-  ungroup() %>%             # no longer grouped by date
-  summarise(flights = n())
-```
-

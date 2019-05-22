@@ -23,7 +23,7 @@ By 26.04 there are 7 **content** blog pages and 1 **organisation** blog:
 6. Data transformation
 7. TBA
 
-By 22.05 the structure has been changed a bit and in the final version there are the following blog pages:
+By 22.05 the structure has been changed and in the final version there are 9 **content** blog pages and 1 **organisation** blog:
 . How my BLOG was created
 1. Data preparation
 2. Linear models
@@ -33,6 +33,7 @@ By 22.05 the structure has been changed a bit and in the final version there are
 6. Data transformation and wrangling 1
 7. Interaction effects and Model fitting
 8. Data transformation and wrangling 2
+9. Aggregation and summarizing
 
 #### 2. Content
 From the beginning I decided to put my code library inside the blog. The reasons to do this:

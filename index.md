@@ -18,6 +18,7 @@ There will be my blog for the QM in HCI course, FS19.
 - [6. Data transformation and wrangling 1](pages/6blog.html)
 - [7. Interaction effects and Model fitting](pages/7blog.html)
 - [8. Data transformation and wrangling 2](pages/8blog.html)
+- [9. Aggregation and summarizing](pages/9blog.html)
 
 
 ---

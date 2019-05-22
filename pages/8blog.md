@@ -7,22 +7,29 @@ description: This page is reserved for my 8th BLOG.
 ### Data transformation and wrangling 2
 The second part of data wrangling topic to cover more functions to organise the data.
 
-#### 1. Modify columns
-##### separate() function
+### 0. tidyverse unctions
+
+- operations on the combining and splitting the columns: **separate()** / **unite()**
+- joining and combining tables: **bind_cols()** / **bind_rows()** / **_join()**
+- modifying the shape of tables: **spread()** / **gather()**
+
+
+### 1. Modify columns
+#### separate() function
 
 ...pulls apart one column into multiple columns, by splitting wherever a separator character appears:
 ```
 data %>%
     separate(user_device, c("user", "device"))
 ```
-##### unite() function
+#### unite() function
 is the inverse of separate(): it combines multiple columns into a single column:
 ```
 data %>%
     unite(user_device, user, device, sep="-")
 ```
 
-#### 2. Combine tables
+### 2. Combine tables
 
 ```
 bind_cols(data_left, data_right)
@@ -42,7 +49,7 @@ An **outer join** keeps observations that appear in at least one of the tables; 
 ```
 ```
 
-#### 3. Change the shape of the tables
+### 3. Change the shape of the tables
 
 **spread()**
 ```
