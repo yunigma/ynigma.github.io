@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Yulia's BLOG
+title: My HCI BLOG
 tagline: GitHub Pages with disqus comments
 description: Minimal tutorial on making a simple website with GitHub Pages
 ---
