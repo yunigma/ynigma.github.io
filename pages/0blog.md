@@ -50,3 +50,4 @@ Blog 4 ("R playing around with a language corpus") is my trying on working with 
 
 (22.05) My commits activity: <https://github.com/yunigma/yunigma.github.io/graphs/commit-activity>
 
+(24.05) I have recently started with the code assignment and I am happy to notice that now I am using my library quite regularly.
